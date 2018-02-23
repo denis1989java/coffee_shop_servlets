@@ -1,0 +1,20 @@
+.emptyList {
+    color: red;
+    font-family: sans-serif, Arial;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: red;
+    font-size: 20px;
+}
+
+.mainInfo {
+    margin-left: 10px
+}

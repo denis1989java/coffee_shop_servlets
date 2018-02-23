@@ -1,0 +1,15 @@
+USE coffee_shop;
+DROP TABLE IF EXISTS `coffee`;
+DROP TABLE IF EXISTS `order_item`;
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `coffee` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(50) NOT NULL, `description` VARCHAR(200) NOT NULL, `price` BIGINT(50) NOT NULL, PRIMARY KEY (`id`), UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+CREATE TABLE `order_item` ( `id` INT NOT NULL AUTO_INCREMENT, `coffee` INT NOT NULL, `order` INT NOT NULL, `quantity` INT NOT NULL, PRIMARY KEY (`id`), UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+CREATE TABLE `order` ( `id` INT NOT NULL AUTO_INCREMENT, `customer_name` VARCHAR(50) NOT NULL, `customer_address` VARCHAR(100) NOT NULL, `phone` VARCHAR(45) NOT NULL, `status` INT NOT NULL, `price` BIGINT(50) NOT NULL, PRIMARY KEY (`id`), UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+INSERT INTO `coffee`(name, description, price) VALUES ("Americano","bitter",8);
+INSERT INTO `coffee`(name, description, price) VALUES ("Cappuccino","sweet",10);
+INSERT INTO `coffee`(name, description, price) VALUES ("Espresso","5 stars",9);
+INSERT INTO `coffee`(name, description, price) VALUES ("Latte","milk",10);
+INSERT INTO `coffee`(name, description, price) VALUES ("Lungo","half strong",10);
+INSERT INTO `coffee`(name, description, price) VALUES ("Doppiio","dig glass",12);
+INSERT INTO `coffee`(name, description, price) VALUES ("Glace","eggs",12);
+INSERT INTO `coffee`(name, description, price) VALUES ("Raf","with tube",11);
